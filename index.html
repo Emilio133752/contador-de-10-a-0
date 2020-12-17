@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTADOR</title>
+</head>
+<style>
+    body{
+        background-color: #333;
+        overflow: hidden;
+    }
+    #contador{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 200pt;
+        display: flex;
+        justify-content: center;
+        color: white;
+        border:20px solid white; 
+        border-radius: 100%;
+        top: 25%;
+        margin-left: 37%;
+        margin-right: 37%;
+    }
+</style>
+<body onload="clc()">
+
+    <div id="contador"></div>
+    
+</body>
+
+
+
+    <script>
+
+        var contador = document.getElementById('contador')
+        var start  = 11;
+        function clc(){
+
+                if( (start - 1) >= 0 ){
+                start--
+                contador.innerText = start
+                setTimeout("clc()",1000);
+            }
+            }
+                setInterval( () => {
+                    start = 11;
+                    addEventListener('load',clc)
+                }, 11000);        
+    </script>
+</html>
